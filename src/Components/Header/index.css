@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps:wght@900&family=Poppins:wght@800&family=Roboto:wght@500;900&display=swap');
 
-.area {
-  background-color: #00063F;
-  width: 100%;
-  height: 72vh;
-}
-
 .imageContainer {
   background-image: url('../../assets/Img/rickandmorty_header.png');
   background-position: center;

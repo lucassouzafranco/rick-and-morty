@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps&family=Montserrat:wght@200;400&family=Poppins:wght@800&family=Rajdhani:wght@400;600;700&family=Roboto+Mono:wght@200&display=swap');
+
+.cardContainer {
+  margin-top: 4em;
+  margin-left: 2em;
+  display: flex;
+  height: 6vw;
+  border-radius: 10px;
+  width: 25vw;
+  border: 1px solid red;
+  background-color: #FF62F9;
+}
+
+.cardImage {
+  background-image: url("../../assets/Img/rickandmorty_card_cover.png");
+  background-size: cover;
+  width: 20%;
+}
+
+.imageStyle {
+  height: 6vw;
+}
+
+.cardText {
+  height: 2vh;
+}
+
+.textStyle {
+  color: #00063F;
+  font-family: 'Poppins', sans-serif;
+  border: 1px solid red;
+}
