@@ -4,28 +4,35 @@ import rickandmorty_card_cover from '../../assets/Img/rickandmorty_card_cover.pn
 import {getEpisode} from 'rickmortyapi';
 import { useState } from 'react';
 import axios from 'axios';
+import {episodios} from '../../episodios';
 
-const Cards = () => {
+const Cards = (props) => {
 
-  const [episodeOne, setEpisodeOne] = useState(null);
-  const [nameEpisode, setName] = useState(null);
+  const [episodeOne, setEpisodeOne] = React.useState((null), [props.episode]);
+  const [nameEpisode, setName] = React.useState((null), [props.name]);
   
   const loadData = async () => {
-    
     const request = await axios.get('https://rickandmortyapi.com/api/episode');
-    const firstEpisode = await getEpisode('1');
-
+    //setEpisodeOne(await getEpisode(1));
+    //console.log(episodeOne);
   }
 
   return(
-    <div className='cardContainer'>
-      <div className='cardImage'>
-        <img src={rickandmorty_card_cover} className='imageStyle'></img>
+    <>
+      <div className='flexContainer'>
+      {episodios.map((item) => (
+        <div className='cardContainer'>
+          <div className='cardImage'>
+            <img src={rickandmorty_card_cover} className='imageStyle'></img>
+          </div>
+          <div className='cardText'>
+            <p className='textStyle'>{item.nome}</p>
+            <p className='releaseDate'>{item.temporada}</p>
+          </div>
+        </div>
+      ))}
       </div>
-      <div className='cardText'>
-        <p className='textStyle'>NomeDoEp - TEMPORADA</p>
-      </div>
-    </div>
+    </>
   )
 }
 

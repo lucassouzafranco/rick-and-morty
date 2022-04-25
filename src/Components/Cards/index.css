@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps&family=Montserrat:wght@200;400&family=Poppins:wght@800&family=Rajdhani:wght@400;600;700&family=Roboto+Mono:wght@200&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.flexContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .cardContainer {
   margin-top: 4em;
   margin-left: 2em;
@@ -7,7 +18,6 @@
   height: 6vw;
   border-radius: 10px;
   width: 25vw;
-  border: 1px solid red;
   background-color: #FF62F9;
 }
 
@@ -23,10 +33,16 @@
 
 .cardText {
   height: 2vh;
+  display: flex;  
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .textStyle {
   color: #00063F;
   font-family: 'Poppins', sans-serif;
-  border: 1px solid red;
+}
+
+.releaseDate {
+  margin-top: 1.6em;
 }
