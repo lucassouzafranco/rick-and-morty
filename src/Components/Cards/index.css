@@ -12,37 +12,45 @@
 }
 
 .cardContainer {
-  margin-top: 4em;
-  margin-left: 2em;
   display: flex;
   height: 6vw;
-  border-radius: 10px;
   width: 25vw;
+  margin-top: 4em;
+  margin-left: 2em;
+  border-radius: 10px;
   background-color: #FF62F9;
 }
 
 .cardImage {
-  background-image: url("../../assets/Img/rickandmorty_card_cover.png");
+  width: 23%;
   background-size: cover;
-  width: 20%;
 }
 
 .imageStyle {
   height: 6vw;
+  border-radius: 10px 0 0 10px;
 }
 
 .cardText {
-  height: 2vh;
   display: flex;  
+  padding-left: 0.6em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.textStyle {
+.episodeTitle {
   color: #00063F;
   font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: large;
 }
 
 .releaseDate {
-  margin-top: 1.6em;
+  color: #00063F;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: small;
+  font-style: italic;
 }
