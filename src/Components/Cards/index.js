@@ -4,7 +4,6 @@ import './index.css';
 const Cards = ({eps}) => {
 
   return(
-
     <>
       <div className='flexContainer'>
         {eps.map((item, key) => (
@@ -24,7 +23,6 @@ const Cards = ({eps}) => {
         ))}
         </div>
     </>
-
   )
 }
 

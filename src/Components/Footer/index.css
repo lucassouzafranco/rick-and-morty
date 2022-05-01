@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+.container{
+  display: flex;
+  height: 20vh;
+  margin-top: 4em;
+  justify-content: center;
+}
+
+.plusButton{
+  width: 13vw;
+  height: 3vh;
+  background-color: #541567;
+  padding: 0.7em;
+  border-radius: 6px;
+}
+
+.buttonText {
+  font-family: 'Poppins';
+  font-weight: 700;
+  color: #00C5C0;
+  font-size: large;
+}

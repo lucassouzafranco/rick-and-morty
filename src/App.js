@@ -5,6 +5,7 @@ import Main from './Components/Main/index.js'
 import Cards from './Components/Cards/index.js';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+import Footer from './Components/Footer/index.js';
 
 const App = () => {
 
@@ -31,6 +32,7 @@ const App = () => {
       <Header/>
       <Main/> 
       {loading ? <span>Carregando</span> : <Cards eps={episodes}/>}
+      <Footer/>
     </>
   );
 }
