@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Components/Header/index.js';
 import 'normalize.css';
-import Main from './Components/Main/index.js'
+import Main from './Components/Main/index.js';
 import Cards from './Components/Cards/index.js';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
@@ -11,6 +11,7 @@ const App = () => {
 
   const [episodes, setEpisodes] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [next, setNext] = useState('');
 
   useEffect(() => {
     async function loadData() {
@@ -19,6 +20,7 @@ const App = () => {
         .then((response) =>{
           if(response) {
             setEpisodes(response.data.results);
+            setNext(response.data.info.pages);
             setLoading(false);
           }
         })
@@ -32,7 +34,8 @@ const App = () => {
       <Header/>
       <Main/> 
       {loading ? <span>Carregando</span> : <Cards eps={episodes}/>}
-      <Footer/>
+      {loading ? <span>Carregando</span> : <Footer newPage={next}/>}
+
     </>
   );
 }
