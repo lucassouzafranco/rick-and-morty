@@ -13,11 +13,27 @@
   background-color: #541567;
   padding: 0.7em;
   border-radius: 6px;
+  cursor: pointer;
 }
 
 .buttonText {
   font-family: 'Poppins';
   font-weight: 700;
   color: #00C5C0;
+  font-size: large;
+}
+
+.disabledButton {
+  width: 13vw;
+  height: 3vh;
+  background-color: #14021a;
+  padding: 0.7em;
+  border-radius: 6px;
+}
+
+.disabledButtonText {
+  font-family: 'Poppins';
+  font-weight: 700;
+  color: #6d6d6d;
   font-size: large;
 }

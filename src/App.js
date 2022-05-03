@@ -20,7 +20,6 @@ const App = () => {
         .then((response) =>{
           if(response) {
             setEpisodes(response.data.results);
-            setNext(response.data.info.pages);
             setLoading(false);
           }
         })
@@ -34,7 +33,7 @@ const App = () => {
       <Header/>
       <Main/> 
       {loading ? <span>Carregando</span> : <Cards eps={episodes}/>}
-      {loading ? <span>Carregando</span> : <Footer newPage={next}/>}
+      {loading ? <span>Carregando</span> : <Footer/>}
 
     </>
   );

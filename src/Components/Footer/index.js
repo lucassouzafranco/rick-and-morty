@@ -4,20 +4,20 @@ import axios from 'axios';
 import { useState } from "react";
 import Cards from "../Cards";
 
-const Footer = ({newPage}) => {
+const Footer = () => {
   const [eps, setEps] = useState([{}]);
   const [loading, setLoading] = useState(false);
-  
-  let pages = newPage - 1;
+  let [pages, setPages] = useState(2);
+
   const load = async() => {
-    if (pages <= newPage) {
+    if (pages <= 3) {
       setLoading(true);
       await axios.get(`https://rickandmortyapi.com/api/episode?page=${pages}`)
       .then((response) =>{
             if(response) {
               setEps(response.data.results);
               setLoading(false);
-              pages += 1;
+              setPages(pages + 1);
             }
           })
             .catch((erro) => console.log(erro));
@@ -28,9 +28,16 @@ const Footer = ({newPage}) => {
     <>
       {loading ? <span>Carregando</span>: <Cards eps={eps}/>}
         <div className="container">
-          <div className="plusButton">
-            <h2 className="buttonText" onClick={load}>Carregar mais ep's</h2>
-          </div>
+          {pages > 3 && (
+            <div className="disabledButton">
+              <h2 className="disabledButtonText">Carregar mais ep's</h2>
+            </div>
+          )}
+          {pages <= 3 && (
+            <div className="plusButton" >
+              <h2 className="buttonText" onClick={load}>Carregar mais ep's</h2>
+            </div>
+          )}
         </div>
     </>
   )
