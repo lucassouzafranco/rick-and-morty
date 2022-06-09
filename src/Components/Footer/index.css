@@ -37,3 +37,25 @@
   color: #6d6d6d;
   font-size: large;
 }
+
+@media only screen and (max-width: 375px){ /*iPhone SE*/
+  .plusButton {
+    width: 25vw;
+    height: 4vh;
+  }
+  
+  .buttonText {
+    width: 25vw;
+  }
+}
+
+@media only screen and (max-width: 414px){ /*iPhone XR*/
+  .plusButton {
+    width: 25vw;
+    height: 4vh;
+  }
+  
+  .buttonText {
+    width: 25vw;
+  }
+}

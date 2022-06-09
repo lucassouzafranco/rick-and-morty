@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps:wght@900&family=Poppins:wght@800&family=Roboto:wght@500;900&display=swap');
 
+.imageAndTitleArea {
+  justify-content: center;
+}
+
 .imageContainer {
   background-image: url('../../assets/Img/rickandmorty_header.png');
   background-position: center;
@@ -10,7 +14,9 @@
 }
 
 .titleContainer {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 1em 0;
 }
 
@@ -19,4 +25,26 @@
   font-size: 2.5em;
   font-family: 'Poppins', sans-serif;
   color: #00C5C0;
+}
+
+@media only screen and (max-width: 375px){ /*iPhone SE*/
+  .imageContainer {
+    height: 35vh;
+    width: 100%;
+  }
+
+  .title {
+    font-size: 2em;
+  }
+}
+
+@media only screen and (min-width: 376px){ /*iPhone XR*/
+  .imageContainer {
+    height: 25vh;
+    width: 110%;
+  }
+  
+  .title {
+    font-size: 2em;
+  }
 }

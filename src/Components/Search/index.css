@@ -37,3 +37,27 @@ input::placeholder {
   width: 5%;
   font-size: 1.6em;
 }
+
+@media only screen and (max-width: 375px){ /*iPhone SE*/
+  .inputContainer {
+    height: 5vh;
+    width: 55vw;
+    border-radius: 7px;
+  }
+
+  input::placeholder {
+    font-size: 0.8em;
+  }
+}
+
+@media only screen and (max-width: 414px){ /*iPhone XR*/
+  .inputContainer {
+    height: 5vh;
+    width: 55vw;
+    border-radius: 7px;
+  }
+
+  input::placeholder {
+    font-size: 0.8em;
+  }
+}

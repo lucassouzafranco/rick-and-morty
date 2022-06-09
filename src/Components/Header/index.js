@@ -3,14 +3,12 @@ import './index.css';
 
 const Header = () => {
   return(
-    <div className='area'>
-      <div>
+      <div className='imageAndTitleArea'>
         <div className='imageContainer'/>
-        <div className='titleContainer'>
+        <div className='titleContainer' >
           <h2 className='title'>Rick and Morty</h2>
         </div>
-      </div>  
-    </div>
+      </div> 
   )
 }
 
