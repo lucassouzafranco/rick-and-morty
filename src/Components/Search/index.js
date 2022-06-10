@@ -25,13 +25,22 @@ const Search = () => {
     }
     loadData();
   }, [])
-  console.log();
 
+  function stringTreatment(event) {
+    if(word) {
+      setWord('');
+    }
+    let string = event.target.value;
+    string = string.trim();
+    string = string[0].toUpperCase() + string.substring(1);
+    setWord(string);
+  }
+  
   return (
     <>
       <div className='inputArea'>
         <div className='inputContainer'>
-          <input placeholder=' Digite o nome de um episódio' onChange={(e) => setWord(e.target.value)}></input>
+          <input placeholder=' Digite o nome de um episódio' onChange={stringTreatment}></input>
           <BiSearchAlt2 className='iconStyle'/>
         </div>
       </div>  
@@ -41,7 +50,7 @@ const Search = () => {
         </>
         : 
         <>
-          <Cards eps={episodes}/>
+          <Cards eps={episodes}/> //todos os episódios
         </>
       }
     </>
