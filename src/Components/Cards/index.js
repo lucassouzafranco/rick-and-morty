@@ -21,7 +21,7 @@ const Cards = ({eps}) => {
             </div>
           </div>
         ))}
-        </div>
+      </div>
     </>
   )
 }

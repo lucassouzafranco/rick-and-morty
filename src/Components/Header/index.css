@@ -2,6 +2,7 @@
 
 .imageAndTitleArea {
   justify-content: center;
+  
 }
 
 .imageContainer {
@@ -33,17 +34,6 @@
     width: 100%;
   }
 
-  .title {
-    font-size: 2em;
-  }
-}
-
-@media only screen and (min-width: 376px){ /*iPhone XR*/
-  .imageContainer {
-    height: 25vh;
-    width: 110%;
-  }
-  
   .title {
     font-size: 2em;
   }

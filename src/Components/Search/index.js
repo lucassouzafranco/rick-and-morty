@@ -50,7 +50,7 @@ const Search = () => {
         </>
         : 
         <>
-          <Cards eps={episodes}/> //todos os episódios
+          <Cards eps={episodes}/>
         </>
       }
     </>
